@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Match Schedule - CricPulse</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .match-card {
+            background: var(--card-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            transition: transform 0.3s;
+        }
+
+        .match-card:hover {
+            transform: translateX(10px);
+            border-color: var(--primary-color);
+        }
+
+        .team {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex: 1;
+        }
+
+        .team-flag {
+            width: 40px;
+            height: 40px;
+            background: #333;
+            /* Placeholder for flag */
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+        }
+
+        .vs {
+            font-weight: 700;
+            color: var(--muted-text);
+            margin: 0 20px;
+        }
+
+        .match-info {
+            text-align: right;
+            border-left: 1px solid var(--glass-border);
+            padding-left: 20px;
+            min-width: 150px;
+        }
+
+        .date {
+            color: var(--secondary-color);
+            font-weight: 600;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .venue {
+            font-size: 0.85rem;
+            color: var(--muted-text);
+        }
+
+        @media (max-width: 600px) {
+            .match-card {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+
+            .match-info {
+                border-left: none;
+                border-top: 1px solid var(--glass-border);
+                padding-top: 15px;
+                padding-left: 0;
+                width: 100%;
+                text-align: center;
+            }
+
+            .team {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Nav -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Cric<span class="highlight">Pulse</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#news">News</a></li>
+                <li><a href="knowledge.html">Knowledge</a></li>
+                <li><a href="matches.html" class="active">Matches</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero" style="min-height: 40vh; height: auto; padding-top: 120px; padding-bottom: 40px;">
+        <div class="hero-content">
+            <h1>Upcoming <span class="text-gradient">Fixtures</span></h1>
+            <p>Don't miss a single ball. Check out the schedule for Sri Lanka and major international tournaments.</p>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+
+            <div class="match-card">
+                <div class="team">
+                    <div class="team-flag" style="background: #003366;">SL</div>
+                    <h3>Sri Lanka</h3>
+                </div>
+                <div class="vs">VS</div>
+                <div class="team">
+                    <div class="team-flag" style="background: #FFD700; color: black;">AUS</div>
+                    <h3>Australia</h3>
+                </div>
+                <div class="match-info">
+                    <span class="date">Oct 12, 2026</span>
+                    <span class="venue">R. Premadasa Stadium, Colombo</span>
+                    <span class="venue">14:30 IST</span>
+                </div>
+            </div>
+
+            <div class="match-card">
+                <div class="team">
+                    <div class="team-flag" style="background: #003366;">SL</div>
+                    <h3>Sri Lanka</h3>
+                </div>
+                <div class="vs">VS</div>
+                <div class="team">
+                    <div class="team-flag" style="background: #008000;">PAK</div>
+                    <h3>Pakistan</h3>
+                </div>
+                <div class="match-info">
+                    <span class="date">Oct 15, 2026</span>
+                    <span class="venue">Galle International Stadium</span>
+                    <span class="venue">10:00 IST (Test)</span>
+                </div>
+            </div>
+
+            <div class="match-card">
+                <div class="team">
+                    <div class="team-flag" style="background: #1e90ff;">IND</div>
+                    <h3>India</h3>
+                </div>
+                <div class="vs">VS</div>
+                <div class="team">
+                    <div class="team-flag" style="background: #000;">ENG</div>
+                    <h3>England</h3>
+                </div>
+                <div class="match-info">
+                    <span class="date">Nov 02, 2026</span>
+                    <span class="venue">Eden Gardens, Kolkata</span>
+                    <span class="venue">19:00 IST (T20)</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 CricPulse. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

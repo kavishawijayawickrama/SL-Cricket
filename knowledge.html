@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Knowledge Hub - CricPulse</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .search-bar {
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 15px 25px;
+            border-radius: 30px;
+            border: 1px solid var(--glass-border);
+            background: var(--card-bg);
+            /* Use card-bg instead of glass-bg for better opacity */
+            color: white;
+            font-size: 1.1rem;
+            outline: none;
+            transition: all 0.3s;
+        }
+
+        .search-input:focus {
+            border-color: var(--secondary-color);
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 15px rgba(255, 204, 0, 0.2);
+        }
+
+        .category-pill {
+            display: inline-block;
+            padding: 8px 16px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            border: 1px solid transparent;
+            transition: all 0.3s;
+        }
+
+        .category-pill:hover,
+        .category-pill.active {
+            background: rgba(0, 77, 230, 0.2);
+            border-color: var(--primary-color);
+            color: white;
+        }
+
+        .article-card {
+            background: var(--card-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            padding: 25px;
+            transition: transform 0.3s;
+        }
+
+        .article-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-color);
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Cric<span class="highlight">Pulse</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#news">News</a></li>
+                <li><a href="knowledge.html" class="active">Knowledge</a></li>
+                <li><a href="matches.html">Matches</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero"
+        style="min-height: 50vh; height: auto; text-align: center; justify-content: center; padding-top: 100px;">
+        <div class="hero-content" style="max-width: 800px;">
+            <span class="badge">Learn & Master</span>
+            <h1>The Cricket <span class="text-gradient">Encyclopedia</span></h1>
+            <p>From the laws of the game to advanced techniques. Enhance your understanding of cricket.</p>
+
+            <div class="search-bar">
+                <input type="text" placeholder="Search for 'LBW Rule', 'Cover Drive'..." class="search-input">
+            </div>
+
+            <div style="margin-top: 30px;">
+                <span class="category-pill active">All Topics</span>
+                <span class="category-pill">Rules</span>
+                <span class="category-pill">Batting</span>
+                <span class="category-pill">Bowling</span>
+                <span class="category-pill">Fielding</span>
+                <span class="category-pill">History</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Essential <span class="highlight">Guides</span></h2>
+
+            <div class="grid knowledge-grid">
+
+                <div class="article-card">
+                    <span class="category">Rules</span>
+                    <h3>The LBW Law Explained</h3>
+                    <p>Understanding Leg Before Wicket. What is pitching outside leg? Impact in line? We break it down
+                        simply.</p>
+                    <a href="#" class="read-more">Read Guide &rarr;</a>
+                </div>
+
+                <div class="article-card">
+                    <span class="category">Technique</span>
+                    <h3>Mastering the Cover Drive</h3>
+                    <p>Step-by-step guide to playing the most elegant shot in cricket. Footwork, balance, and execution.
+                    </p>
+                    <a href="#" class="read-more">View Tutorial &rarr;</a>
+                </div>
+
+                <div class="article-card">
+                    <span class="category">Bowling</span>
+                    <h3>The Art of Swing Bowling</h3>
+                    <p>What makes the ball swing? The difference between conventional and reverse swing explained.</p>
+                    <a href="#" class="read-more">Deep Dive &rarr;</a>
+                </div>
+
+                <div class="article-card">
+                    <span class="category">History</span>
+                    <h3>1996: The Golden Year</h3>
+                    <p>A retrospective on how Sri Lanka changed ODI cricket forever with their World Cup triumph.</p>
+                    <a href="#" class="read-more">Read Story &rarr;</a>
+                </div>
+
+                <div class="article-card">
+                    <span class="category">Fielding</span>
+                    <h3>Field Positions 101</h3>
+                    <p>From Silly Point to Long On. Learn the names and strategic importance of every fielding position.
+                    </p>
+                    <a href="#" class="read-more">See Diagram &rarr;</a>
+                </div>
+
+                <div class="article-card">
+                    <span class="category">Strategy</span>
+                    <h3>Understanding D/L Method</h3>
+                    <p>The mathematics behind rain-affected matches. How par scores are calculated.</p>
+                    <a href="#" class="read-more">Read Guide &rarr;</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contribution Section -->
+    <section class="section bg-darker" style="text-align: center;">
+        <div class="container">
+            <h2>Share Your Knowledge</h2>
+            <p style="margin-bottom: 30px; color: var(--muted-text);">Have a unique insight or a local cricket story?
+                Contribute to our growing knowledge base.</p>
+            <a href="#" class="btn btn-secondary">Submit an Article</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 CricPulse. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
